@@ -14,7 +14,7 @@
     "fuzzysort": "^2.0.4"
   },
   "scripts": {
-    "start": "pm2 start server.js --force",
+    "start": "pm2 start server.js --watch",
     "dev": "start server.js",
     "load": "node fuzzy-search-load.js",
     "test": "mocha"
