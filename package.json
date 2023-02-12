@@ -6,7 +6,7 @@
 		"body-parser": "1.0.1",
 		"express": "4.0"
 	},
-	"engines": {
-		"node": "0.10.33"
-	}
+	"scripts": {
+    	   "start": "pm2 start server.js"
+	}	
 }
