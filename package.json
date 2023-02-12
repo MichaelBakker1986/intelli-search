@@ -1,12 +1,26 @@
 {
-	"name": "node-api-test-example",
-	"main": "server.js",
-	"description": "Node API Test Example",
-	"dependencies": {
-		"body-parser": "1.0.1",
-		"express": "4.0"
-	},
-	"scripts": {
-    	   "start": "pm2 start server.js"
-	}	
+  "name": "intelli-search",
+  "main": "server.js",
+  "type": "module",
+  "description": "Intelli-search",
+  "dependencies": {
+    "body-parser": "1.0.1",
+    "express": "^4.18.2",
+    "minimist": "^1.2.7",
+    "dotenv": "^16.0.3",
+    "glob-promise": "^6.0.2",
+    "cors": "^2.8.5",
+    "gray-matter": "^4.0.3",
+    "fuzzysort": "^2.0.4"
+  },
+  "scripts": {
+    "start": "pm2 start server.js",
+    "dev": "start server.js",
+    "load": "node fuzzy-search-load.js",
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
 }
