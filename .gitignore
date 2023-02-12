@@ -27,6 +27,6 @@ build/Release
 node_modules
 
 #environment
-.env.local
+/.env.local
 *.iml
 .idea

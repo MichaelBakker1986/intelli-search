@@ -1,3 +1,3 @@
-==========================
-IntelliSearch
-==========================
+# intelli-search
+
+first time right
