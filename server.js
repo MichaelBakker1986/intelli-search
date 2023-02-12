@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 var locationList = [];
 
-app.get('/users/1', function(req, res) {
+app.get('/test', function(req, res) {
 	var user = {
 		name: "Karen",
 		email: "karen@example.com",
