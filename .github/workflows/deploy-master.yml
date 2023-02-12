@@ -1,13 +1,15 @@
 ---
 name: deploy-master-prod
 
+
 on:
   push:
     branches: [ master ]
 
 jobs:
+
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - uses: actions/checkout@v3
@@ -15,12 +17,6 @@ jobs:
           fetch-depth: 0
 
       - id: deploy
-        name: Deploy to dokku
-        uses: idoberko2/dokku-deploy-github-action@v1
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-          dokku-host: 85.144.156.206
-          app-name: api
-          remote-branch: master
-          git-push-flags: '--force'
-
+        name: Deploy to host
+      - run: npm i
+      - run: npm start     
