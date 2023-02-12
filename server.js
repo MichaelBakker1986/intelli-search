@@ -1,5 +1,6 @@
 import bodyParser  from 'body-parser'
 import express     from 'express'
+import cors        from 'cors'
 import fuzzySearch from './fuzzy-search-impl.js'
 
 const port = process.env.PORT || 3010,
@@ -7,6 +8,7 @@ const port = process.env.PORT || 3010,
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
+app.use(cors())
 
 app.get('/q/:q', (req, res) => {
 	res
