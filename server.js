@@ -1,6 +1,6 @@
 var express = require('express'),
 	bodyParser = require('body-parser'),
-	port = process.env.PORT || 3000,
+	port = process.env.PORT || 3010,
 	app = express();
 
 app.use(express.static(__dirname + '/public'))
