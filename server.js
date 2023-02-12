@@ -16,6 +16,6 @@ app.get('/q/:q', (req, res) => {
 })
 
 app.listen(port, () => {
-	console.log('Intelli-search server loaded', port)
+	console.log('Intelli-search server loaded v2 ', port)
 	console.log(`Intelli-search server loaded http://localhost:${ port }/q/blogs`)
 })
