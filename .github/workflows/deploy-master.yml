@@ -1,22 +1,16 @@
----
 name: deploy-master-prod
-
-
 on:
   push:
     branches: [ master ]
-
 jobs:
-
   build:
     runs-on: self-hosted
-
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-
-      - id: deploy
-        name: Deploy to host
-      - run: npm i
-      - run: npm start     
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - run: npm install
+      - run: npm start   
