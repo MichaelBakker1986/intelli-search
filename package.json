@@ -18,10 +18,11 @@
     "gray-matter": "^4.0.3"
   },
   "scripts": {
-    "start": "pm2 start server.js --watch",
+    "start": "pm2 start server.js --name \"memory-search\" --watch",
     "dev": "start server.js",
     "load": "node fuzzy-search-load.js",
-    "test": "mocha"
+    "test": "mocha",
+    "publish": "npm run test && git add . && git commit -a -m \"release\" && git push origin master"
   },
   "devDependencies": {
     "chai": "^4.3.7",
