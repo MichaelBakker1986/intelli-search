@@ -1,3 +1,4 @@
 # intelli-search
 
-first time right
+.first time right
+reboot script enabled
